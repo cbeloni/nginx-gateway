@@ -1,8 +1,9 @@
 version: "3"
-
-gateway:
+services:
+  gateway:
+    container_name: nginx-gateway
     build: .
     ports:
       - "80:80"
     volumes:
-        - ~/nginx/html:/usr/share/nginx/html
+        - ~/html:/usr/share/nginx/html

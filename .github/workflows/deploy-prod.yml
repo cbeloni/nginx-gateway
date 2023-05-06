@@ -9,7 +9,7 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     environment:
-      name: datasaude
+      name: nginx
     steps:
       - name: building app
         uses: appleboy/ssh-action@v0.1.7
@@ -26,6 +26,10 @@ jobs:
             echo "Clone repositório"
             [ -d nginx-gateway ] && rm -rf nginx-gateway
             git clone https://${{ secrets.GIT_USER }}:${{ secrets.GIT_TOKEN }}@github.com/cbeloni/nginx-gateway.git           
-            echo "Buildando projeto"
+            echo "Copiando arquivos estáticos"
+            cd ~
+            [ -d html ] && rm -rf html
             cd ~/app/nginx-gateway
+            cp -r html ~/html
+            echo "Iniciando nginx"
             docker-compose up -d --no-deps --build
