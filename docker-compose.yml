@@ -6,4 +6,4 @@ services:
     ports:
       - "80:80"
     volumes:
-        - /home/ubuntu/html:/usr/share/nginx/html
+        - ~/html:/usr/share/nginx/html

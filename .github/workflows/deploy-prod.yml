@@ -30,7 +30,7 @@ jobs:
             cd ~
             [ -d html ] && rm -rf html
             cd ~/app/nginx-gateway
-            cp -r html/ /home/ubuntu
+            cp -r html/ ~
             echo "Iniciando nginx"
             docker-compose down
             docker-compose up -d --build
