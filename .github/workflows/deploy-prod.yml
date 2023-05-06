@@ -32,4 +32,4 @@ jobs:
             cd ~/app/nginx-gateway
             cp -r html/ /home/ubuntu
             echo "Iniciando nginx"
-            docker-compose up -d --no-deps --build
+            docker-compose up -d --build
