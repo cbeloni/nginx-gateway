@@ -1,6 +1,5 @@
-FROM nginx
+FROM arm64v8/nginx
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
-# Define o entrypoint
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+
