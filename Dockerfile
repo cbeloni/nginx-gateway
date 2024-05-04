@@ -1,4 +1,4 @@
-FROM arm64v8/nginx:1.26-alpine3.19
+FROM arm32v7/nginx
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
