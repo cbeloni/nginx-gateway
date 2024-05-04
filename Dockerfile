@@ -1,4 +1,4 @@
-FROM arm32v7/nginx
+FROM nginx
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
